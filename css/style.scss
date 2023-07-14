@@ -1,0 +1,120 @@
+@import './sass/mixins.scss';
+@import './sass/reset.scss';
+@import './sass/font.scss';
+@import './sass/colors.scss';
+
+body {
+  height: 100vh;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr 20fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+  align-items: stretch;
+  background-color: $color-white-second;
+}
+
+header {
+  grid-area: header;
+  background-color: $color-white;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    font-family: $font-primary;
+    font-weight: 400;
+
+    h1 {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+    }
+
+    input {
+      @include hide;
+    }
+  }
+}
+
+main {
+  grid-area: main;
+  font-family: $font-secondary;
+
+  .left {
+
+    padding: 10px;
+
+    ul {
+      justify-content: space-between;
+      background-color: $color-white;
+      @include border(10px);
+    }
+
+    article {
+      @include border(0px);
+      background-color: $color-white;
+      margin-top: 20px;
+
+      .header_post {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+        .name_user {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          gap: 10px;
+        }
+      }
+
+      .content_post {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        line-height: 25px;
+
+        .reactions_post {
+          display: flex;
+          gap: 10px;
+          padding: 10px;
+          img{
+            cursor: pointer;
+          }
+        }
+        .comments_post{
+          font-size: 12px;
+          p{
+            span{
+              font-weight: bolder;
+            }
+          }
+          button{
+            color:$color-gray;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    @include hide;
+  }
+}
+
+footer {
+  grid-area: footer;
+  font-family: $font-primary;
+  font-weight: 400;
+
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  height: 40px;
+}
+a img {
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr 20fr 1fr;
+  grid-template-areas: "header header" "main main" "footer footer";
+  align-items: stretch;
+  background-color: #FAFAFA;
+}
+
+header {
+  grid-area: header;
+  background-color: #FFFFFF;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+header nav h1 {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+header nav input {
+  display: none;
+}
+
+main {
+  grid-area: main;
+  font-family: "Inter", sans-serif;
+}
+main .left {
+  padding: 10px;
+}
+main .left ul {
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border: 0.4px solid rgba(34, 34, 34, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+}
+main .left article {
+  border: 0.4px solid rgba(34, 34, 34, 0.5);
+  border-radius: 5px;
+  padding: 0px;
+  background-color: #FFFFFF;
+  margin-top: 20px;
+}
+main .left article .header_post {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+main .left article .header_post .name_user {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  gap: 10px;
+}
+main .left article .content_post {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+}
+main .left article .content_post .reactions_post {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+main .left article .content_post .reactions_post img {
+  cursor: pointer;
+}
+main .left article .content_post .comments_post {
+  font-size: 12px;
+}
+main .left article .content_post .comments_post p span {
+  font-weight: bolder;
+}
+main .left article .content_post .comments_post button {
+  color: #808080;
+}
+main .right {
+  display: none;
+}
+
+footer {
+  grid-area: footer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */
