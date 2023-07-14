@@ -1,0 +1,13 @@
+@mixin hide {
+  display: none;
+}
+
+@mixin circlePhoto {
+  border-radius: 50%;
+}
+
+@mixin border ($valor) {
+  border: 0.4px solid rgba(34, 34, 34, 0.50);
+  border-radius: 5px;
+  padding: $valor;
+}
