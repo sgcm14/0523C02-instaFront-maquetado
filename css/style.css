@@ -120,9 +120,89 @@ footer {
   grid-area: footer;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  background-color: black;
+  background-color: #222222;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  header nav {
+    padding: 10px 20px 10px 50px;
+  }
+  header nav input {
+    display: block !important;
+    width: 400px;
+    border-radius: 5px;
+    border: 0.3px solid #222222;
+    background: #FAFAFA;
+    padding: 10px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "left right" "left right";
+    gap: 100px;
+    padding: 10px 50px;
+  }
+  main .left {
+    grid-area: left;
+  }
+  main .right {
+    grid-area: right;
+    display: block;
+  }
+  main .right .header_user {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 20px 0;
+  }
+  main .right .header_user .user_name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  main .right .header_user .user_name h2 {
+    font-size: 10px;
+    font-weight: normal;
+    color: #000000;
+  }
+  main .right .header_user .user_name h2 span {
+    color: #808080;
+  }
+  main .right .header_user .user_name button {
+    color: #1CA0F6;
+  }
+  main .right .contacts {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  main .right .contacts h3 {
+    font-size: 10px;
+    color: #808080;
+  }
+  main .right .contacts .item {
+    display: flex;
+    justify-content: space-between;
+  }
+  main .right .contacts .item .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  main .right .contacts .item .header span {
+    font-size: 10px;
+    color: #000000;
+  }
+  main .right .contacts .item .header a {
+    height: 30px;
+  }
+  main .right .contacts .item button {
+    font-size: 10px;
+    color: #1CA0F6;
+  }
 }/*# sourceMappingURL=style.css.map */
